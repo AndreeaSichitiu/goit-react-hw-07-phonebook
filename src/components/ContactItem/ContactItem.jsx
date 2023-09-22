@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { useDispatch } from 'react-redux';
-import { deleteContacts } from 'redux/contactBookSlice';
+// import { deleteContacts } from 'redux/contactBookSlice';
+import { deleteContact } from 'redux/operations';
 
 export default function ContactItem({ contacts }) {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteContacts(contacts));
+    dispatch(deleteContact(contacts.id));
     Notify.info(
       `${contacts.name} was successfully deleted from your phonebook`,
       {

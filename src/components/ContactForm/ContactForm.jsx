@@ -4,8 +4,9 @@ import style from './ContactForm.module.css';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts } from 'redux/contactBookSlice';
+// import { addContacts } from 'redux/contactBookSlice';
 import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/operations';
 
 export function ContactForm() {
   const [name, setName] = useState('');
@@ -29,7 +30,7 @@ export function ContactForm() {
       setNumber('');
       return;
     }
-    dispatch(addContacts(name, number));
+    dispatch(addContact({name: name, number: number}));
     setName('');
     setNumber('');
 
