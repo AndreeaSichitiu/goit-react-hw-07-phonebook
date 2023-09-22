@@ -6,7 +6,7 @@ import Loader from './Loader/Loader';
 
 import { fetchContacts } from 'redux/operations';
 import { getIsLoading, getError } from 'redux/selectors';
- 
+
 import { useDispatch, useSelector } from 'react-redux';
 
 export function App() {

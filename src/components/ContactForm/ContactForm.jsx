@@ -30,7 +30,7 @@ export function ContactForm() {
       setNumber('');
       return;
     }
-    dispatch(addContact({name: name, number: number}));
+    dispatch(addContact({ name: name, number: number }));
     setName('');
     setNumber('');
 
